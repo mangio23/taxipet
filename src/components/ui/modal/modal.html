@@ -1,0 +1,9 @@
+<template>
+	<require from="./css/style.css"></require>
+
+	<dialog style.bind="visible ? 'display:flex' : 'display:none'">
+        <div class="content" element.ref="content">
+            <slot></slot>
+        </div>
+    </dialog>
+</template>

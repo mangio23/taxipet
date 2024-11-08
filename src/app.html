@@ -1,0 +1,22 @@
+<template>
+    <!-- custom css files -->
+    <require from="css/general-styles.css"></require>
+    <require from="css/font-awesome.css"></require>
+    <require from="css/buttons.css"></require>
+    <require from="components/features/navbar/navbar"></require>
+    <require from="components/features/page-footer/page-footer"></require>
+
+    <!-- imported css files -->
+    <require from="@fortawesome/fontawesome-free/css/all.min.css"></require>
+
+    <div class="page-body">
+        <!-- navbar -->
+        <navbar></navbar>
+    
+        <!-- actual page -->
+        <router-view></router-view>
+
+        <!-- footer -->
+        <page-footer></page-footer>
+    </div>
+</template>

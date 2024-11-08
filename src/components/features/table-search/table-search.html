@@ -1,0 +1,32 @@
+<template>
+    <require from="./css/style.css"></require>
+    <require from="css/forms.css"></require>
+    <require from="components/ui/modal/modal"></require>
+    <require from="components/ui/icon/icon.html"></require>
+
+    <modal view-model.ref="filtersModal" id="filtersModal">
+        <h1>Filtra per</h1>
+        <form>
+            <fieldset>
+                <slot></slot>
+
+                <button type="button" class="custom orange" click.delegate="cancelFilter()">Annulla</button>
+                <button type="button" class="custom green filter" click.delegate="filterData()">Filtra</button>
+            </fieldset>
+        </form>
+    </modal>
+    <div class="search-container">
+        <div class="general-search">
+            <icon fixed="true" type="magnifying-glass"></icon>
+            <input ref="generalSearchInput" type="text" placeholder="Cerca per ${ placeholder }..." value.bind="general">
+        </div>
+        <!-- <div class="selected-filters" if.bind="thereAreFilters">
+            <span>Filtri impostati <icon type="arrow-right"></icon></span>
+            TODO come facio a far vedere i filtri impostati qua?
+        </div> -->
+        <button class="custom blue" click.delegate="filtersModal.open()">
+            Filtri&nbsp;
+            <icon type="filter"></icon>
+        </button>
+    </div>
+</template>

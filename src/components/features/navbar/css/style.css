@@ -1,0 +1,49 @@
+nav {
+	display: flex;
+	align-items: center;
+	background-color: rgb(255, 255, 255);
+	border-bottom: 1px solid rgb(180, 180, 180);
+	padding: .5rem;
+	justify-content: space-between;
+	height: 3rem;
+}
+
+nav .logo {
+	max-height: 100%;
+	cursor: pointer;
+}
+
+nav ol {
+	display: flex;
+	width: max-content;
+	column-gap: 3rem;
+	padding-inline-start: 0;
+}
+
+nav ol li {
+	list-style: none;
+}
+
+nav ol li.nav-element {
+	position: relative;
+	font-size: 1rem;
+	background-color: inherit;
+	color: rgb(70, 80, 140);
+	cursor: pointer;
+	min-height: 100%;
+	align-self: bottom;
+}
+
+nav ol li * {
+	cursor: inherit;
+}
+
+@media (max-width: 600px) {
+	nav {
+		justify-content: space-between;
+	}
+
+	nav .logo {
+		justify-self: center;
+	}
+}

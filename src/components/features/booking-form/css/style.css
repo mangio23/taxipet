@@ -1,0 +1,36 @@
+booking-form form fieldset {
+    margin: auto;
+}
+
+booking-form form fieldset .row {
+    justify-content: center;
+}
+
+@media(min-width: 600px) {
+    div.field#full-name {
+        width: 60ch;
+    }
+}
+
+form .row#last-row {
+    justify-content: start;
+}
+
+@media(max-width: 600px) {
+    form .row#last-row {
+        flex-direction: row;
+    }
+}
+
+div.field#a-r,
+div.field#you,
+div.field#wait {
+    width: max-content;
+}
+
+booking-form p {
+    /* max-width: 120ch; */
+    text-wrap: wrap;
+    text-align: center;
+    color: white;
+}

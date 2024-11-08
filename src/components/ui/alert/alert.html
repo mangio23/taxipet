@@ -1,0 +1,16 @@
+<template>
+    <require from="./css/style.css"></require>
+    <require from="components/ui/modal/modal"></require>
+    <require from="components/ui/icon/icon.html"></require>
+
+    <modal view-model.ref="alertModal">
+        <div class="alert-container">
+            <div class="icon" class.bind="icon" if.bind="icon">
+                <icon type="${icon}"></icon>
+            </div>
+            <slot name="header"></slot>
+            <slot name="body"></slot>
+            <slot name="footer"></slot>
+        </div>
+    </modal>
+</template>

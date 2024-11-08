@@ -1,0 +1,19 @@
+<template>
+	<require from="./css/style.css"></require>
+    <require from="components/ui/icon/icon.html"></require>
+
+	<nav>
+		<img src="/src/images/logo.png" class="logo" click.delegate="goToHome()">
+		<ol>
+			<li class="nav-element">
+				<label click.delegate="routeTo('home')"><strong>Home</strong></label>
+			</li>
+			<li class="nav-element">
+				<label click.delegate="routeTo('about')"><strong>Chi siamo</strong></label>
+			</li>
+			<li class="nav-element">
+				<label click.delegate="routeTo('contacts')"><strong>Contatti</strong></label>
+			</li>
+		</ol>
+	</nav>
+</template>

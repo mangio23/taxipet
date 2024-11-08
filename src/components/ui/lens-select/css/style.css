@@ -1,0 +1,186 @@
+/* .dropdown {
+    display: flex;
+    position: relative;
+}
+
+.dropdown icon {
+    border-bottom: 1px solid rgb(200, 200, 200);
+}
+
+.dropdown icon:focus-within {
+    border-bottom: 1px solid rgb(176, 154, 233);
+}
+
+.dropdown ul {
+    position: absolute;
+    top: 2.5rem;
+    left: 0;
+    border-radius: .8rem;
+    background-color: rgb(255, 255, 255);
+    padding: 0;
+    height: 0;
+    overflow-y: auto;
+}
+
+.dropdown ul:focus-within {
+    height: min-content;
+    max-height: 15rem;
+    box-shadow: 5px 5px 4px #C2BCD5;
+    border: 1px solid rgb(180, 180, 180);
+}
+
+.dropdown ul li {
+    visibility: hidden;
+    padding: .5rem;
+    z-index: 2;
+}
+
+.dropdown ul:focus-within * {
+	visibility: visible;
+}
+
+.dropdown ul li:hover {
+    background-color: red;
+    cursor: pointer;
+} */
+
+
+/* Custom <lens-select> element. */
+
+lens-select glyph,
+lens-select .placeholder {
+    color: #777;
+}
+
+/* Selection */
+
+lens-select .selection {
+    display: flex;
+    flex-direction: row;
+    gap: .1cm;
+
+    padding: .1cm;
+    background-color: white;
+
+    line-height: normal;
+    font-size: initial;
+}
+
+lens-select .selection {
+    cursor: pointer;
+}
+
+:disabled lens-select .selection,
+[disabled="disabled"] lens-select .selection,
+lens-select[disabled="disabled"] .selection {
+    cursor: not-allowed;
+    background-color: #ccc;
+}
+
+lens-select .selection > * {
+    align-self: center;
+}
+
+lens-select .selection glyph {
+    font-size: x-small;
+}
+
+lens-select .selection .selected {
+    flex-grow: 1;
+}
+
+lens-select .selection .arrow {
+    float: right;
+}
+
+lens-select .selection .multi.option {
+    display: inline-block;
+    font-size: smaller;
+
+    padding: .1cm;
+    background-color: #dfebdf;
+    border-radius: .1cm;
+    margin-right: .1cm;
+    margin-bottom: .1cm;
+}
+
+/* Dropdown */
+
+.lens-dropdown {
+    position: fixed;
+    z-index: 9999;
+
+    background: white;
+    border: solid 1px #ccc;
+    padding: 0;
+
+    overflow-y: scroll;
+}
+
+.lens-dropdown:not(:focus-within) {
+    /*
+     !!! IMPORTANT !!!
+     You can't use "display: none" or "visibility: hidden" to hide the dropdown.
+     If you do so, the element WILL NOT BE FOCUSABLE, and it won't open with ":focus-within".
+     This is standard DOM behaviour, so there's nothing you can do about it.
+     */
+
+    border: none;
+    width: 0;
+    height: 0;
+}
+
+.lens-dropdown:focus-within {
+    width: auto;
+    height: auto;
+}
+
+/* Searchbar */
+
+.lens-dropdown .searchbar {
+    display: flex;
+    flex-direction: row;
+    gap: .2cm;
+
+    width: 100%;
+
+    padding: .1cm .2cm;
+    margin-bottom: 0;
+    background-color: white;
+    box-sizing: border-box;
+}
+
+.lens-dropdown .searchbar > * {
+    align-self: center;
+}
+
+.lens-dropdown .searchbar input[type="search"] {
+    /* flex-grow: 1; */
+
+    color: #666;
+    border: solid 1px #aaa;
+    border-radius: .2cm;
+}
+
+/* Options */
+
+.lens-dropdown .options {
+    list-style: none;
+    max-height: 8cm;
+
+    padding: 0;
+    margin: 0;
+}
+
+.lens-dropdown ul.options li {
+    padding: .1cm;
+}
+
+.lens-dropdown ul.options li:hover {
+    cursor: pointer;
+    background-color: #ebdfeb;
+}
+
+.lens-dropdown ul.options li.selected {
+    background-color: #dfebdf;
+}

@@ -1,0 +1,22 @@
+RESOLVED
+
+ - Posso essere dottore e committente (più in generale due membri diversi) all'interno della stessa organizzazione?
+ > Si
+
+ - Se ho due membri (e.g. committente in farmacia pippo e committente in farmacia salcazzo) avrò due membri collegati al mio profilo o un membro con più organizationId?
+ > due membri
+
+ - In customers abbiamo messo che i membri possono essere sia amministratori che committenti, come la gestiamo sta cosa da la mia organizzazione?
+   creiamo sia un Admin che un Commissioner o come facciamo?
+ > Si
+
+
+
+TODO
+
+ - Come faccio a collegare un membro ad un profilo esistente?
+
+ - my-profile --> bottone "usa email" va diretto a salvare o facciamo vedere da qualche parte un bottone di conferma?
+   perché se va subito a salvare se poi si fa un cambia pwd non c'è problema, altrimenti devo tenermi salvato l'username precedente oppure bloccare il cambia pwd finchè non conferma il cambio username
+
+ - All'inizio la width della sidebar è ''

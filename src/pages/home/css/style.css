@@ -1,0 +1,63 @@
+section {
+    padding: 3rem 0;
+}
+
+section h1 {
+    color: black;
+}
+
+section h2,
+section h4 {
+    color: rgb(255, 248, 231);
+}
+
+section.first {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    background: linear-gradient(135deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 10%, rgba(0,212,255,1) 100%);
+}
+
+section.first .brief-info {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.brief-info h1 {
+    text-align: left;
+}
+
+.brief-info h4 {
+    width: 100%;
+    text-align: left;
+    margin: 0;
+}
+
+@media(max-width: 1025px) {
+    .brief-info h4,
+    .brief-info h1 {
+        text-align: center;
+    }
+}
+
+section.second {
+    background: linear-gradient(225deg, rgba(0,212,255,1) 0%, rgba(9,9,121,1) 90%,  rgba(2,0,36,1)100%);
+}
+
+section.second .booking {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+section.second .urgent {
+    margin-top: 3rem;
+}
+
+section.second .urgent h2 {
+    text-align: center;
+}

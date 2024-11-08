@@ -1,0 +1,41 @@
+<template ref="lensSelect">
+    <require from="./css/style.css"></require>
+    <require from="components/ui/icon/icon.html"></require>
+
+    <div class="selection">
+        <span class="selected">
+
+            <!-- Multi -->
+
+            <span if.bind="isMulti && hasSelection" class="multi option" repeat.for="sel of selection">
+                <icon type="xmark" show.bind="!isDisabled" click.delegate="deselect(sel)"></icon>
+                ${ sel.text }
+            </span>
+
+            <!-- Single -->
+
+            <span if.bind="!isMulti && hasSelection" class="option">
+                ${ selection.text }
+            </span>
+
+            <span class="placeholder" if.bind="!hasSelection">Clicca per cercare...</span>
+        </span>
+
+        <icon type="caret-down"></icon>
+    </div>
+
+    <!-- Options -->
+
+    <div ref="dropdown" class="lens-dropdown" show.bind="!isDisabled">
+        <div class="searchbar">
+            <icon type="magnifying-glass"></icon>
+            <input type="search" value.bind="searchText & debounce:300" placeholder="Cerca...">
+        </div>
+
+        <ul class="options">
+            <li repeat.for="opt of visibleOptions" class.bind="isSelected(opt) ? 'selected' : ''" click.delegate="toggleSelect(opt)">
+                ${ opt.text }
+            </li>
+        </ul>
+    </div>
+</template>

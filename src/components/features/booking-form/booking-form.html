@@ -1,0 +1,48 @@
+<template>
+    <require from="./css/style.css"></require>
+    <require from="css/forms.css"></require>
+
+    <form>
+        <fieldset>
+            <div class="row">
+                <div class="field">
+                    <label>Cognome e nome*</label>
+                    <input type="text" value.bind="data.fullName">
+                </div>
+                <div class="field">
+                    <label>Email*</label>
+                    <input type="email" value.bind="data.email">
+                </div>
+            </div>
+            <div class="row">
+                <div class="field">
+                    <label>Telefono*</label>
+                    <input type="text" value.bind="data.mobilePhone">
+                </div>
+                <div class="field">
+                    <label>Data*</label>
+                    <input type="datetime-local" value.bind="data.date">
+                </div>
+            </div>
+            <div class="row" id="last-row">
+                <div class="field" id="a-r">
+                    <label>A/R</label>
+                    <input type="checkbox" checked.bind="data.or">
+                </div>
+                <div class="field" id="wait" if.bind="data.or">
+                    <label>Ti devo aspettare?</label>
+                    <input type="checkbox" checked.bind="data.wait">
+                </div>
+                <div class="field" id="you">
+                    <label>Verrai anche tu?</label>
+                    <input type="checkbox" checked.bind="data.ownerTransport">
+                </div>
+            </div>
+            <button class="custom orange">Svuota</button>
+            <button type="button" class="custom blue" style="float:right;" click.delegate="book()">Prenota</button>
+        </fieldset>
+    </form>
+
+    <p if.bind="!booking">Cliccando sul pulsante Prenota si dichiara di aver letto, compreso e accettato le condizioni di trattamento dei dati personali.</p>
+    <p if.bind="booking">La richiesta è stata inviata, un nostro operatore le darà conferma nel più breve tempo possibile!</p>
+</template>

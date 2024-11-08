@@ -1,0 +1,65 @@
+.alert-container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    min-width: 30rem;
+    max-width: 60vw;
+    justify-content: center;
+}
+
+.alert-container .icon {
+    margin: 0 auto 0 auto;
+    font-size: 3rem;
+    border: 2px solid black;
+    border-radius: 100%;
+    aspect-ratio: 1/1;
+    display: flex;
+    width: min-content;
+    padding: 1rem;
+    justify-self: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.alert-container div[slot="body"] {
+    margin: auto;
+    font-size: 1.4rem;
+}
+
+.alert-container div[slot="footer"] {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.alert-container .icon.check {
+    border-color: rgb(133, 208, 90);
+}
+
+.alert-container .icon .fa-check {
+    color: rgb(133, 208, 90);
+}
+
+.alert-container .icon.x {
+    border-color: rgb(255, 0, 0);
+}
+
+.alert-container .icon .fa-x {
+    color: rgb(255, 0, 0);
+}
+
+.alert-container .icon.circle-info {
+    border-color: rgb(143, 193, 247);
+}
+
+.alert-container .icon .fa-circle-info {
+    color: rgb(143, 193, 247);
+}
+
+.alert-container .icon.triangle-exclamation {
+    border-color: rgb(251, 125, 0);
+}
+
+.alert-container .icon .fa-triangle-exclamation {
+    color: rgb(251, 125, 0);
+}

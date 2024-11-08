@@ -1,0 +1,49 @@
+.buttons-container {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: .5rem;
+    padding: 1.5rem 0;
+    margin-left: 3rem;
+}
+
+button {
+	cursor: pointer;
+}
+
+button.custom {
+    color: rgb(250, 250, 250);
+    border-style: none;
+    padding: .8rem;
+    border-radius: .4rem;
+    box-shadow: 1px 1px 6px rgb(0, 0, 0, .3);
+}
+
+button.custom:hover {
+    transform: scale(1.1);
+}
+
+button.custom:disabled {
+    opacity: 0.5;
+    cursor: no-drop;
+}
+
+button.green {
+    background-color: rgb(100, 195, 105); 
+}
+
+button.orange {
+    background-color: rgb(230, 120, 45);
+}
+
+button.blue {
+    background-color: rgb(65, 70, 130);
+}
+
+button.red {
+    background-color: rgb(255, 0, 0);
+}
+
+button.grey {
+    background-color: rgb(150, 150, 150);
+}

@@ -1,0 +1,9 @@
+<template>
+    <require from="./css/style.css"></require>
+
+    <div class="tab">
+        <button id.bind="page.key + '-btn'" class="tab-links" repeat.for="page of pages" click.delegate="openPage(page)">${ page.name }</button>
+    </div>
+
+    <slot></slot>
+</template>

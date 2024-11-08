@@ -1,0 +1,14 @@
+footer {
+    background-color: black;
+    border-top: 2px solid rgb(255, 170, 0);
+
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    font-size: small;
+}
+
+footer span,
+footer a {
+    color: white;
+}

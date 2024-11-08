@@ -1,0 +1,50 @@
+.tab {
+    white-space: nowrap;
+    overflow-x: auto;
+}
+
+@media (max-width: 600px) {
+    .tab {
+        width: 90vw;
+    }
+
+    .tab-content {
+        width: 90vw;
+    }
+}
+
+/* Vuttons that are used to open the tab content */
+.tab button {
+    background-color: inherit;
+    display: inline-block;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: .8rem 1rem;
+    transition: 0.3s;
+    border-radius: .7rem .7rem 0 0;
+    border: 1px solid rgb(125, 120, 170);
+    border-bottom: none;
+    background-color: rgb(195, 190, 215);
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: rgb(160, 155, 200);
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    color: white;
+    background-color: rgb(125, 120, 170);
+}
+
+.tab-content {
+    display: none;
+    padding: 1.5rem 0 1.5rem 1.5rem;
+    box-sizing: border-box;
+    border-radius: 0 .5rem .5rem .5rem;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 5px 5px 4px rgb(195, 190, 215);
+    border: 1px solid rgb(180, 180, 180);
+}
